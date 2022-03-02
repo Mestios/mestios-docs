@@ -1,0 +1,11 @@
+.md-header__button.md-logo img, .md-header__button.md-logo svg {
+    width: auto !important;
+}
+
+/* .md-typeset {
+        background-color: #03E3E7;
+} */
+
+.md-typeset [type=checkbox]:checked+.task-list-indicator:before {
+    background-color: #5B397D;
+}

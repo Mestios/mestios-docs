@@ -1,0 +1,130 @@
+site_name: ""
+site_url: https://alpha.mestios.com
+repo_url: ""
+edit_uri: ""
+
+theme:
+  name: 'material'
+  favicon: 'assets/favicon.ico'
+  logo: 'assets/mestios2.svg'
+  icon:
+    repo: fontawesome/brands/git-alt
+  features:
+    #- navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    #- navigation.expand
+    - navigation.top
+    #- header.autohide    # hides header completely when scrolling down
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: white  
+      accent: cyan
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: black 
+      accent: cyan
+
+extra:
+  # Link to go when logo clicked
+  homepage: https://github.com/bluxmit/alnoda-workspaces
+  host_url: http://localhost
+
+plugins:
+  - search
+  - include-markdown
+  # Enables Macros and jinja2 ttemplates
+  - macros:
+      module_name: macros/helpers
+  # https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
+  - awesome-pages
+  # mermaid2 diagrams: https://mermaid-js.github.io/mermaid/#/
+  - mermaid2:
+      arguments:
+        theme: forest   # default, forest, dark, neutral, base
+        themeCSS: ".er.entityLabel{fill: black;} .messageLine0{stroke: orange;} .messageLine1{stroke: orange;} #arrowhead{fill: orange;} .messageText{fill: black; stroke: black}"    
+  #- pdf-export
+  # - with-pdf:
+  #     output_path: /home/document.pdf
+  #     exclude_pages:
+  #          - 'home/'
+  #     two_columns_level: 3
+  # This will allow autodocumentation of python code from the projects cloned in the parent of this dir
+  # - mkdocstrings:
+  #     handlers:
+  #           python:
+  #               setup_commands:
+  #                   - import sys
+  #                   - sys.path.append('../')
+
+markdown_extensions:
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - md_in_html
+  - pymdownx.inlinehilite
+  - pymdownx.details
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed
+  - abbr
+  - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.escapeall
+  - pymdownx.smartsymbols
+  - pymdownx.tilde:
+      smart_delete: true
+  - footnotes
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+extra_css:
+  - stylesheets/extra.css
+
+
+# ===========================================================
+# NAVIGATION
+# ===========================================================
+
+nav:
+  - Home: index.md
+  - About: 
+      - Intro: about/intro.md
+      - The team: about/team.md
+      - Our story: about/story.md
+      - Our values: about/values.md
+  - Docs:
+      - Entities: 
+        - About: docs/entities/about.md
+        - Create: docs/entities/create.md
+      - Statements: 
+        - About: docs/statements/about.md
+        - Create: docs/statements/create.md
+          
+ 
+
+
+

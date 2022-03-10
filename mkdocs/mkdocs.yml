@@ -123,6 +123,12 @@ nav:
       - Statements: 
         - About: docs/statements/about.md
         - Create: docs/statements/create.md
+      - Opinions: 
+        - About: docs/opinions/about.md
+        - Create: docs/opinions/create.md
+      - Publications: 
+        - About: docs/publications/about.md
+        - Create: docs/publications/create.md
           
  
 

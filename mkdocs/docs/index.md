@@ -265,7 +265,7 @@ hide:
            <img src = "assets/collective-opinion.svg" alt="Collective intelligence"/> 
         </div>
         <div class="usecase-caption">
-            UPlatform to unlock collective intelligence
+            Platform to unlock collective intelligence
         </div>
         <div class="usecase-description">
             The intention of Mestios is to make a platform where through collaboration we could find solutions for the actual problems.
